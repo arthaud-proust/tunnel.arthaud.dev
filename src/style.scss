@@ -37,7 +37,7 @@ body {
     transform-style: preserve-3d;
   }
 
-  &:hover div {
+  &.flipped div {
     transform: rotateY(180deg);
   }
 
