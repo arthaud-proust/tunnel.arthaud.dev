@@ -53,8 +53,10 @@ body {
   }
 }
 
-nav > * {
-  margin-right: 2rem;
+nav {
+  display: flex;
+  gap: 1rem 2rem;
+  flex-wrap: wrap;
 }
 
 .card + p {
