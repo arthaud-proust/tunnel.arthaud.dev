@@ -1,0 +1,39 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import {Image} from "astro:assets";
+import FlippableCard from "@/components/FlippableCard.astro";
+export function getStaticPaths() {
+    return [
+        {params: {id: 1}},
+        {params: {id: 2}},
+    ];
+}
+
+const {id} = Astro.params;
+
+const frontImagePath = `/src/assets/images/level-${id}-front.png`,
+    backImagePath = `/src/assets/images/level-${id}-back.png`;
+
+const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/images/*.{jpeg,jpg,png,gif}');
+if (!images[frontImagePath]) throw new Error(`"${frontImagePath}" does not exist in glob: "/src/assets/images/*.{jpeg,jpg,png,gif}"`);
+if (!images[backImagePath]) throw new Error(`"${backImagePath}" does not exist in glob: "/src/assets/images/*.{jpeg,jpg,png,gif}"`);
+---
+
+<Layout title=`Tunnel - Niveau ${id}`>
+    <a href="/">Retour à l'accueil</a>
+
+    <FlippableCard>
+        <Image slot="front" src={images[frontImagePath]()} alt=""/>
+        <Image slot="back" src={images[backImagePath]()} alt=""/>
+    </FlippableCard>
+
+    <p>Clique la carte pour la retourner</p>
+
+
+</Layout>
+
+<style>
+    a, p {
+        text-align: center;
+    }
+</style>
