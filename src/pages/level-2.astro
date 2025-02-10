@@ -1,0 +1,22 @@
+---
+import Layout from '../layouts/Layout.astro';
+import TunnelCard from "../components/TunnelCard.astro";
+
+import frontImgRef from "@/assets/images/level-2-front.png";
+import backImgRef from "@/assets/images/level-2-back.png";
+---
+
+<Layout>
+    <TunnelCard>
+        <img slot="front" src={frontImgRef.src} alt=""/>
+        <img slot="back" src={backImgRef.src} alt=""/>
+    </TunnelCard>
+
+    <p>Clique la carte pour la retourner</p>
+</Layout>
+
+<style>
+    p {
+        text-align: center;
+    }
+</style>

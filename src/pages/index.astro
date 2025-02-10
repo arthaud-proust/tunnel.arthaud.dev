@@ -1,0 +1,33 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import decoRef from "@/assets/images/deco.png";
+---
+
+<Layout>
+    <img src={decoRef.src} alt=""/>
+    <h1>Vous avez pris un tunnel ?</h1>
+    <p>
+        Voici deux cartes pour indiquer avec une touche d'humour à votre correspondant que la conversation est
+        unidirectionnelle.
+    </p>
+    <nav>
+        <a href="/level-1">
+            Voir la carte niveau 1
+        </a>
+        <a href="/level-2">
+            Voir la carte niveau 2
+        </a>
+    </nav>
+</Layout>
+
+<style>
+    img {
+        width: 35%;
+    }
+
+    nav {
+        display: flex;
+        gap: 1rem 2rem;
+        flex-wrap: wrap;
+    }
+</style>

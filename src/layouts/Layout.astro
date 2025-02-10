@@ -1,3 +1,6 @@
+---
+import '@/styles/style.scss';
+---
 <!doctype html>
 <html lang="fr">
 <head>
@@ -12,21 +15,9 @@
     <meta name="apple-mobile-web-app-title" content="Tunnel"/>
     <link rel="manifest" href="/site.webmanifest"/>
 
-    <link rel="stylesheet" href="src/style.scss"/>
+    <meta name="generator" content={Astro.generator}/>
 </head>
 <body>
-<h1>Vous avez pris un tunnel ?</h1>
-<p>
-    Voici deux cartes pour indiquer avec une touche d'humour à votre correspondant que la conversation est
-    unidirectionnelle.
-</p>
-<nav>
-    <a href="/level-1">
-        Voir la carte niveau 1
-    </a>
-    <a href="/level-2">
-        Voir la carte niveau 2
-    </a>
-</nav>
+<slot/>
 </body>
 </html>

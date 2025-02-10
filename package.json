@@ -1,18 +1,17 @@
 {
-  "name": "tunnel.arthaud.dev",
-  "private": true,
-  "version": "0.0.0",
+  "name": "tunnel",
   "type": "module",
+  "version": "0.0.1",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "astro": "^5.2.5"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.20",
-    "@types/node": "^22.13.1",
-    "postcss": "^8.4.47",
-    "typescript": "~5.7.2",
-    "vite": "^6.1.0"
+    "sass-embedded": "^1.83.4"
   }
 }
