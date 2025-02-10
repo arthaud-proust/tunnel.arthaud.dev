@@ -7,7 +7,7 @@ import decoRef from "@/assets/images/deco.png";
     <img src={decoRef.src} alt=""/>
     <h1>Vous avez pris un tunnel ?</h1>
     <p>
-        Voici deux cartes pour indiquer avec une touche d'humour à votre correspondant que la conversation est
+        Indiquez avec une touche d'humour à votre correspondant que la conversation est
         unidirectionnelle.
     </p>
     <nav>
@@ -25,9 +25,34 @@ import decoRef from "@/assets/images/deco.png";
         width: 35%;
     }
 
+    p, nav {
+        font-size: 1.1rem;
+    }
+
     nav {
         display: flex;
-        gap: 1rem 2rem;
-        flex-wrap: wrap;
+        flex-flow: row wrap;
+        gap: .5rem;
+
+        a {
+            padding: .5rem 1rem;
+            background: #101010;
+            color: #fff;
+            border-radius: .5rem;
+            text-decoration: none;
+            font-weight: bold;
+
+            &:first-of-type {
+                background: #ea9911;
+            }
+
+            &:last-of-type {
+                background: #e34912;
+            }
+
+            &:hover {
+                filter: brightness(105%);
+            }
+        }
     }
 </style>
